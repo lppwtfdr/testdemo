@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!--移动设备的视窗设置，禁止移动用户的强制性缩放-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		
+		<title></title>
+		<style>
+			*{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-3">导航索引</div>
+				<div class="col-xs-9">具体内容</div>
+				<button id="btn_1">点击(0)</button>
+				<button id="btn_2">点击(0)</button>
+				<button id="btn_3">点击(0)</button>
+			</div>
+		
+		</div>
+	</body>
+	<script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/bootlint.js" type="text/javascript"></script>
+	<script>
+		$("button").click(e=>{
+			console.dir($(e.target).html().slice(3,-1));
+			$(e.target).html(`点击(${parseInt($(e.target).html().slice(3,-1))+1})`);
+			console.log($(e.target).html());
+			
+		});
+	</script>
+</html>
